@@ -30,5 +30,18 @@ For tax GST, customer 123 has declared $123.4
 
 ```
 $ npm install 
+$ npm install -g .
+
+```
+# Uninstall the CLI
+
+```
+$ npm uninstall -g tax-cli
+```
+
+# How to use this app
+After install the cli globally you can run below comment in any terminal 
+
+```
 $ tax-cli
 ```

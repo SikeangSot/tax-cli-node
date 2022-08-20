@@ -1,6 +1,8 @@
 export default {
   testEnvironment: "jest-environment-node",
-  transform: {},
+  transform: {
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
   testMatch: ["**/__tests__/**/*.js", "**/?(*.)+(spec|test).js"],
   collectCoverage: true,
   collectCoverageFrom: ["src/**.js"],
@@ -11,7 +13,7 @@ export default {
     global: {
       branches: 95,
       functions: 95,
-      lines: 95,
-    },
-  },
+      lines: 95
+    }
+  }
 };

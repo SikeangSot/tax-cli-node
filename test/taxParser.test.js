@@ -6,10 +6,10 @@ const type = "payroll";
 const lines = [
   "8143,	2021/12/abababbba-95272, 	2021-11-23T15:32:57.458,		 156.88,		CAPITOL_GAIN",
   "8143,	2010/12/abbbabaab-11108, 	 2021-11-24T10:32:57.519,	542.87,	PAYROLL",
-  "8143,       2021/10/baaaaabaa-10067,	2021-11-24T20:32:57.540, 401.16,	 PAYROLL",
+  "8143,       2021/10/baaaaabaa-10067,	2021-11-24T20:32:57.540, 401.16,	 PAYROLL"
 ];
 
-const amountDeclare = 944;
+const amountDeclare = 943;
 describe("the tax parser", () => {
   it("tax parser should not be undefined", () => {
     expect(parser).not.toBe(undefined);
@@ -21,8 +21,8 @@ describe("the tax parser", () => {
   it("tax parser should return exact amount that user has declared", () => {
     const result = parser(existingUser, type);
     const totalAmountDeclare = lines.reduce(
-      (acc, nextValue) => acc +result(nextValue) 
-    ,0);
+      (acc, nextValue) => acc + result(nextValue)
+      , 0);
 
     expect(totalAmountDeclare).toBe(amountDeclare);
   });
