@@ -1,7 +1,7 @@
-import { generateTaxReport } from "../src/index";
+import generateTaxReport from "../src/index";
 
-describe("the tax parser", () => {
-  it("tax parser should not be undefined", () => {
+describe("the generate tax report", () => {
+  it("the generate tax report should not be undefined", () => {
     expect(generateTaxReport).not.toBe(undefined);
   });
 });

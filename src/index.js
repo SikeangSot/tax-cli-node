@@ -5,7 +5,6 @@ import { exit } from "process";
 import parser from "./taxParser.js";
 import taxCalculate from "./taxCalculator.js";
 import { hideBin } from "yargs/helpers";
-import chalk from "chalk";
 
 const yargsInstance = yargs(hideBin(process.argv));
 
@@ -34,10 +33,10 @@ export const generateTaxReport = () => {
   try {
     const stream = fs.createReadStream(file);
     taxCalculate(stream, parser(user, type), function (total) {
-      console.log(chalk.bgCyan(`For tax ${type}, customer ${user} has declared $${total}`));
+      console.log(`For tax ${type}, customer ${user} has declared $${total}`);
     });
   } catch (error) {
-    console.error(error);
+    console.log(error);
     exit(1);
   }
 };

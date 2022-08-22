@@ -9,7 +9,7 @@ const lines = [
   "8143,       2021/10/baaaaabaa-10067,	2021-11-24T20:32:57.540, 401.16,	 PAYROLL"
 ];
 
-const amountDeclare = 943;
+const amountDeclare = 944.03;
 describe("the tax parser", () => {
   it("tax parser should not be undefined", () => {
     expect(parser).not.toBe(undefined);
